@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $usuario = mysqli_fetch_assoc($resultado);
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nombre'] = $usuario['nombre'];
+        $_SESSION['role'] = $usuario['role']; // Agregar esta línea para almacenar el rol en la sesión
 
         echo '
             <html>
